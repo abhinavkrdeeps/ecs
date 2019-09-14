@@ -1,0 +1,58 @@
+<div class="mainbox">
+<div class="left1" *ngIf="cart" >
+   <div class="con1" >
+      <h3>Your Cart : No Of Item :{{cart.length}}</h3>
+   </div>
+
+ 
+
+   <div class="con2">
+     <form>
+       <input routerLink="/checkout" type="submit" value="checkout" class="checkout">
+     </form>
+   </div>
+ 
+
+</div>
+
+<div *ngIf="!cart" class="empty-cart">
+  <div class="head">
+      <h3>Oops! your cart is empty</h3>
+  </div>
+
+  <div class="img1">
+      <img src="https://i.pinimg.com/originals/55/70/09/557009e7812880a314833c600ccba5bb.png" alt="" srcset="">
+  </div>
+  
+  <div class="btn6">
+      <button  routerLink="/book" class="embtn">Visit Our Book Store</button>
+  </div>
+  
+</div>
+
+<div class="m"
+*ngIf="cart">
+
+
+  
+<div  class="card"
+*ngFor="let book of cart">
+  <div class="content">
+  <h3>Title: {{book.title}}</h3>
+  <h4>Author: {{book.authors}}</h4>
+  <p>Avg Rating : {{book. average_rating}}</p>
+  <p>ISBN No: {{book.isbn}}</p>
+  <p>LNG_CODE: {{book.language_code}}</p>
+  <p>RatingCount: {{book.ratings_count}}</p>
+  <p>Price: {{book.price}}</p>
+</div>
+
+ <div class="btn">
+    <form name="form" #f="ngForm" (ngSubmit)="removeBook(book)">
+        <input type="submit" class="cart-btn" value="Remove From Cart">
+        
+</form>
+ </div>
+</div>
+</div>
+</div>

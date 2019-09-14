@@ -1,0 +1,38 @@
+<div class="m"
+*ngIf="filteredbook">
+
+  <h3>Your Search Results</h3>
+
+  <div class="box2">
+<div  class="card"
+*ngFor="let book of filteredbook">
+<div class="content">
+    <div class="info">
+  <h3> <span>Title:</span> {{book.title}}</h3>
+  <h4> <span> Author:</span> {{book.authors}}</h4>
+
+  <p> <span>ISBN No:</span>  {{book.isbn}}</p>
+  <p> <span>  LNG_CODE:</span> {{book.language_code}}</p>
+  <p> <span>RatingCount:  </span> {{book.ratings_count}}</p>
+  <p> <span>Price:</span> {{book.price}}</p>
+</div>
+  <div class="rating" 
+  >
+      <span class="fa fa-star checked"
+      *ngFor="let nu of numbers"></span>
+    
+  </div>
+
+
+</div>
+
+ <div class="btn">
+    <form name="form" #f="ngForm" (ngSubmit)="addToCart(book)">
+        <input type="submit" class="cart-btn" value="Add To Cart">
+        
+</form>
+ </div>
+</div>
+</div>
+</div>
+

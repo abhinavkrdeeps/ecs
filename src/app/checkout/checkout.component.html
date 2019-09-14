@@ -1,0 +1,39 @@
+<div class="main">
+<div class="container">
+
+<div class="header">
+  <h3>No Of Items: {{finalCart.length}}</h3>
+</div>
+
+
+
+<div class="itemc">
+<div class="items"
+*ngFor="let book of finalCart">
+
+  <h4> <span>Title: </span>{{book.title}}</h4>
+  <h5> <span>Author: </span>{{book.authors}}</h5>
+  <h6> <span>price: </span>{{book.price}}</h6>
+  
+
+</div>
+</div>
+
+
+
+<div class="total">
+  <h4> <span>Total Price:</span> {{finalPrice}}</h4>
+</div>
+
+<div class="order">
+
+    <form name="form" #f="ngForm" (ngSubmit)="emptyCart()">
+        <input  type="submit" class="btn" value="place Order">
+        
+</form>
+</div>
+
+
+
+</div>
+</div>

@@ -1,0 +1,95 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+    background: #2196f3;
+    margin-top: 10px;
+    flex-wrap: wrap;
+   width: 300px;
+    margin: 15px;
+    border: 1px solid #2196f3
+}
+.checked{
+    color: #e67e22;
+  }
+  .m{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+  .box2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .content{
+    cursor: pointer;
+    background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content:center;
+      margin: 10px;
+      border: 1px solid white;
+      padding: 10px;
+      align-items: center;
+  }
+  
+  .info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 8px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .info h3{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #3e2723;
+    margin: 5px;
+    padding: 5px;
+  }
+  
+  .info h4{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #3e2723;
+    margin: 5px;
+    padding: 5px;
+  
+  }
+  
+  .info p{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    color:#bf360c;
+    margin: 1px;
+    padding: 1px;
+  
+  }
+  
+  .btn{
+      display: flex;
+      justify-content: space-evenly;
+      
+    }
+    .cart-btn{
+      background-color: white;
+      color: black;
+      font-size: 18px;
+      border: 1px solid black;
+      cursor: pointer;
+      width: 150px;
+      height: 40px;
+    }
+    
+    .cart-btn:hover{
+      background-color:#e91e63;
+      color: white;
+      transition: 0.8s;
+      border: 1px solid #e91e63;
+    }
